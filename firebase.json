@@ -1,0 +1,24 @@
+{
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "craftmitra-ai",
+          "appId": "1:371154588959:android:e053e4594c527268114c2a",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "craftmitra-ai",
+          "configurations": {
+            "android": "1:371154588959:android:e053e4594c527268114c2a"
+          }
+        }
+      }
+    }
+  }
+}

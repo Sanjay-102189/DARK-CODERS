@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "371154588959",
+    "project_id": "craftmitra-ai",
+    "storage_bucket": "craftmitra-ai.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371154588959:android:e053e4594c527268114c2a",
+        "android_client_info": {
+          "package_name": "com.craftmitra.craftmitra"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd8JlXom9iwhVWnclKjkoG1oI8EAh-Nl0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
