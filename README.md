@@ -1,124 +1,259 @@
-CraftMitra
-Your Craft. Your Business. Your Digital Mitra.
+# CraftMitra
 
-AI-Driven Market Linkage and Smart Cataloging Mobile Application for Marginalized Artisans
+### Your Craft. Your Business. Your Digital Mitra.
 
-Smart India Hackathon 2026 — SIH26090
-Theme: Heritage & Culture
-Category: Software
-Team: DARK CODERS
+**AI-Driven Market Linkage and Smart Cataloging Mobile Application for Marginalized Artisans**
 
-1. Project Overview
+**Smart India Hackathon 2026 — SIH26090**
+**Theme:** Heritage & Culture
+**Category:** Software
+**Team:** DARK CODERS
 
-CraftMitra is a mobile application designed to help traditional and marginalized artisans manage the digital side of their craft business.
+---
 
-Many artisans have the skills to create high-quality handmade products but face difficulties when they need to create digital product listings, write descriptions, determine suitable prices, identify potential buyers, and manage orders.
+## 🎯 Problem
 
-CraftMitra addresses this gap through a simple mobile workflow that combines photo-based product creation, voice input, artificial intelligence-assisted cataloging, explainable pricing, buyer matching, and basic business management.
+Many traditional and marginalized artisans have strong craftsmanship but face difficulties when moving their products into digital markets.
 
-The application is designed around a simple principle:
+Common challenges include:
 
-The technology should adapt to the artisan, rather than requiring the artisan to adapt to the technology.
+- Creating professional product listings
+- Writing product descriptions
+- Preparing product images
+- Understanding suitable pricing
+- Finding relevant buyers
+- Managing orders and sales
+- Using unfamiliar digital interfaces
 
+CraftMitra addresses these challenges through a simple, artisan-centered mobile workflow.
 
-2. Problem
+---
 
-Traditional artisans often depend on local markets, intermediaries, exhibitions, and personal networks to sell their products.
+## 💡 Proposed Solution
 
-Moving to digital commerce introduces several challenges:
+**CraftMitra** acts as a virtual business manager for artisans.
 
-Creating professional product listings
-Writing product descriptions
-Photographing and preparing product images
-Entering product information manually
-Understanding suitable pricing
-Finding buyers who require their type of products
-Managing orders and sales information
-Working with digital interfaces and unfamiliar terminology
-Communicating product information when typing is difficult
+Instead of requiring artisans to learn complex digital tools, the application allows them to use **photos and voice input** to create structured product information.
 
-These challenges can prevent artisans from effectively reaching wider digital markets.
+The application supports the journey from product creation to digital selling.
 
+### Core Workflow
 
-3. Proposed Solution
+**SHOW → SPEAK → CREATE → PRICE → MATCH → SELL**
 
-CraftMitra provides a single mobile workflow through which an artisan can take a product from creation to digital selling.
+| Stage | Purpose |
+|---|---|
+| SHOW | Capture or upload the product |
+| SPEAK | Describe the product using voice |
+| CREATE | Generate structured product information |
+| PRICE | Provide an explainable price suggestion |
+| MATCH | Identify suitable buyer profiles |
+| SELL | Publish products and manage orders |
 
-Core Workflow
-SHOW
-  ↓
-SPEAK
-  ↓
-CREATE
-  ↓
-PRICE
-  ↓
-MATCH
-  ↓
-SELL
-Workflow Explanation
+---
 
-SHOW
-The artisan captures or uploads the product image.
+## ✨ Key Features
 
-SPEAK
-The artisan describes the product using voice input.
+### Smart Product Cataloging
+Creates structured product information from available product details.
 
-CREATE
-CraftMitra processes the available information and assists in creating structured product details.
+### Voice-First Product Creation
+Allows artisans to describe products using speech instead of relying completely on typing.
 
-PRICE
-The application provides an explainable price suggestion based on available product and cost factors.
+### AI-Assisted Catalog Creation
+Uses Firebase AI Logic and Gemini to assist with product understanding and catalog information.
 
-MATCH
-The application compares product characteristics with buyer requirements and identifies suitable buyer profiles.
+### Explainable Smart Pricing
+Provides price suggestions using identifiable product and cost factors.
 
-SELL
-The artisan can publish the product, manage orders, and view sales information.
+### Buyer Matching
+Compares product characteristics with buyer requirements to identify relevant buyer profiles.
 
+### Product Publishing
+Allows artisans to review and publish their product information.
 
-4. Key Features
-Smart Product Cataloging
+### Order Management
+Provides order-related information through the application.
 
-Converts basic product information into a structured digital catalog containing details such as:
+### Sales Dashboard
+Helps artisans view sales-related information.
 
-Product title
-Description
-Category
-Product attributes
-Tags
-Images
-Voice-First Product Creation
+---
 
-Artisans can describe their products using speech instead of relying entirely on manual typing.
+## 🛠 Technology Stack
 
-The speech input is converted into text and used as part of the catalog creation process.
+| Layer | Technology |
+|---|---|
+| Mobile Application | Flutter |
+| Programming Language | Dart |
+| State Management | Provider |
+| Navigation | GoRouter |
+| Authentication | Firebase Authentication |
+| Database | Cloud Firestore |
+| Artificial Intelligence | Firebase AI Logic + Gemini |
+| Voice Input | Speech-to-Text |
+| Product Images | Cloudinary |
+| User Interface Design | Stitch |
+| Development | Visual Studio Code / Antigravity |
+| Version Control | Git + GitHub |
 
-Image Studio
+---
 
-Provides product image selection and image-related processing before the product is published.
+## 🏗 System Architecture
 
-Product media is stored separately from application data.
+```text
+                         ARTISAN
+                            │
+                    PHOTO + VOICE INPUT
+                            │
+                            ▼
+                  ┌──────────────────┐
+                  │  FLUTTER MOBILE  │
+                  │   APPLICATION    │
+                  └────────┬─────────┘
+                           │
+              ┌────────────┴────────────┐
+              ▼                         ▼
+       IMAGE PROCESSING            SPEECH-TO-TEXT
+              │                         │
+              └────────────┬────────────┘
+                           ▼
+                    GEMINI AI
+                           │
+                           ▼
+              STRUCTURED PRODUCT DATA
+                           │
+              ┌────────────┴────────────┐
+              ▼                         ▼
+        SMART PRICING             BUYER MATCHING
+              │                         │
+              └────────────┬────────────┘
+                           ▼
+                   PRODUCT PUBLISHING
+                           │
+                           ▼
+                       ORDERS
+                           │
+                           ▼
+                    SALES DASHBOARD
+Supporting Services
 
-Explainable Smart Pricing
+Firebase Authentication → User authentication
+Cloud Firestore → Application data
+Cloudinary → Product image storage
+Firebase AI Logic → Artificial intelligence interaction
 
-CraftMitra provides price suggestions using identifiable factors such as:
+Detailed architecture:
 
+docs/03-System-Architecture.md
+
+🔄 Application Flow
+Authentication
+      ↓
+Home Dashboard
+      ↓
+Add Product
+      ↓
+Image Selection
+      ↓
+Voice Product Description
+      ↓
+Speech-to-Text
+      ↓
+AI-Assisted Catalog Creation
+      ↓
+Catalog Review
+      ↓
+Smart Pricing
+      ↓
+Buyer Matching
+      ↓
+Publish Product
+      ↓
+Order Management
+      ↓
+Sales Dashboard
+
+The artisan remains in control and can review or edit generated information before publishing.
+
+Detailed workflow:
+
+docs/04-Application-Flow.md
+
+🤖 Artificial Intelligence
+
+CraftMitra uses artificial intelligence primarily for product understanding and catalog assistance.
+
+Product Image
+      +
+Artisan Voice
+      ↓
+Speech-to-Text
+      ↓
+Product Information
+      ↓
+Firebase AI Logic
+      ↓
+Gemini
+      ↓
+Structured Product Information
+      ↓
+Catalog Preview
+      ↓
+Artisan Review
+
+Artificial intelligence assists with:
+
+Understanding product information
+Generating product descriptions
+Structuring catalog information
+Product-related assistance
+
+AI-generated information is not automatically treated as final. The artisan can review and edit the information before publishing.
+
+Detailed documentation:
+
+docs/07-AI-Architecture.md
+
+💰 Smart Pricing
+
+CraftMitra provides an explainable price recommendation rather than an unexplained output.
+
+Main Factors
 Material cost
-Labour considerations
+Labour or craft effort
 Product characteristics
 Quantity
-Other available pricing factors
+Other available product factors
+Product & Cost Factors
+          ↓
+   Pricing Logic
+          ↓
+ Price Recommendation
+          ↓
+   Artisan Review
+          ↓
+    Final Price
 
-The artisan can review and modify the suggested price before publishing.
+The current implementation uses application-level pricing logic with artificial intelligence assistance where applicable. It is not presented as a separately trained machine-learning pricing model.
 
-The current implementation uses application-level pricing logic with artificial intelligence assistance where applicable; it is not presented as a separately trained machine-learning pricing model.
+Detailed documentation:
 
-Buyer Matching
+docs/08-Smart-Pricing.md
 
-The application compares product information with buyer requirements.
+🤝 Buyer Matching
 
-Matching can consider factors such as:
+Buyer matching is implemented as an explainable compatibility process.
+
+Product Information
+        +
+Buyer Requirements
+        ↓
+Compatibility Analysis
+        ↓
+Suitable Buyer Profiles
+
+Matching can consider:
 
 Product category
 Material
@@ -128,509 +263,201 @@ Quantity
 Location
 Buyer requirements
 
-The matching approach is designed to remain explainable rather than producing an unexplained recommendation score.
-
-Product Publishing:
-After reviewing the generated information, the artisan can publish the product through the application's product workflow.
-
-Order Management:
-Artisans can view and manage product orders through the application.
-
-Sales Dashboard:
-Provides an overview of sales-related information and helps artisans understand their business activity.
-
-AI Business Assistance:
-CraftMitra includes an AI-assisted business support layer intended to help artisans with product and business-related interactions.
-
-
-5. Technology Stack
-
-Layer:	                           Technology:
-Mobile Application	               Flutter
-Programming Language	           Dart
-State Management	               Provider
-Navigation	                       GoRouter
-Authentication	                   Firebase Authentication
-Database	                       Cloud Firestore
-Artificial Intelligence	           Firebase AI Logic + Gemini
-Voice Input	                       Speech-to-Text
-Product Image Storage	           Cloudinary
-User Interface Design	           Stitch
-Development	                       Visual Studio Code / Antigravity
-Version Control	                   Git + GitHub
-
-
-6. System Architecture
-
-CraftMitra follows a modular mobile application architecture.
-
-                    ARTISAN
-                       │
-                 Photo + Voice
-                       │
-                       ▼
-              ┌─────────────────┐
-              │ Flutter Mobile  │
-              │   Application   │
-              └────────┬────────┘
-                       │
-          ┌────────────┴────────────┐
-          │                         │
-          ▼                         ▼
-   Image Processing          Speech-to-Text
-          │                         │
-          └────────────┬────────────┘
-                       ▼
-                 Gemini AI
-                       │
-                       ▼
-              Product Information
-                       │
-          ┌────────────┴────────────┐
-          ▼                         ▼
-   Smart Pricing             Buyer Matching
-          │                         │
-          └────────────┬────────────┘
-                       ▼
-                Product Publishing
-                       │
-                       ▼
-                    Orders
-                       │
-                       ▼
-                Sales Dashboard
-Supporting Services
-Flutter Application
-       │
-       ├── Firebase Authentication
-       │
-       ├── Cloud Firestore
-       │
-       ├── Firebase AI Logic
-       │
-       └── Cloudinary
-
-A detailed architecture diagram is available in:
-
-docs/03-System-Architecture.md
-
-
-7. Application Flow
-
-The primary product flow is:
-
-User Authentication
-        ↓
-Home Dashboard
-        ↓
-Add Product
-        ↓
-Capture / Upload Image
-        ↓
-Voice Product Description
-        ↓
-Speech-to-Text
-        ↓
-AI-Assisted Catalog Creation
-        ↓
-Catalog Review
-        ↓
-Smart Pricing
-        ↓
-Buyer Matching
-        ↓
-Publish Product
-        ↓
-Order Management
-        ↓
-Sales Dashboard
-
-The artisan remains in control of the final product information and can review or edit generated information before publishing.
-
-Detailed workflow documentation:
-
-docs/04-Application-Flow.md
-
-
-8. AI Architecture
-
-CraftMitra uses artificial intelligence primarily for product understanding and catalog assistance.
-
-Product Image
-      +
-Artisan Voice Input
-      │
-      ▼
-Speech-to-Text
-      │
-      ▼
-Product Information
-      │
-      ▼
-Firebase AI Logic
-      │
-      ▼
-Gemini
-      │
-      ▼
-Structured Product Information
-      │
-      ▼
-Catalog Preview
-      │
-      ▼
-Artisan Review
-AI Responsibilities
-
-The AI layer can assist with:
-
-Understanding product information
-Generating product descriptions
-Structuring catalog information
-Assisting product-related interactions
-Important Design Principle
-
-AI-generated information is not automatically treated as final.
-
-The artisan can review and edit the information before publishing.
-
-Detailed documentation:
-
-docs/07-AI-Architecture.md
-
-
-9. Smart Pricing
-
-CraftMitra's pricing component is designed to provide a transparent price recommendation rather than an unexplained output.
-
-Material Cost
-      +
-Labour / Craft Effort
-      +
-Product Characteristics
-      +
-Quantity
-      +
-Other Available Factors
-      │
-      ▼
-Price Recommendation
-      │
-      ▼
-Artisan Review
-      │
-      ▼
-Final Product Price
-
-The pricing mechanism is currently application-level and explainable. It is not claimed to be a separately trained machine-learning model.
-
-Detailed implementation:
-
-docs/08-Smart-Pricing.md
-
-
-10. Buyer Matching
-
-Buyer matching is implemented as an explainable compatibility process.
-
-Product Information
-       │
-       ├── Category
-       ├── Material
-       ├── Craft Technique
-       ├── Price
-       ├── Quantity
-       └── Location
-                │
-                ▼
-       Buyer Requirements
-                │
-                ▼
-      Compatibility Analysis
-                │
-                ▼
-        Suitable Buyers
-
-The purpose is to help artisans discover buyer profiles whose requirements are relevant to their products.
-
-The current buyer profiles are representative application data for demonstrating the matching workflow.
+The current buyer profiles are representative application data used to demonstrate the matching workflow.
 
 Detailed documentation:
 
 docs/09-Buyer-Matching.md
 
+🗄 Data Architecture
 
-11. Data Architecture
-
-Cloud Firestore is used for application data.
-
-The application separates structured application data from product media.
+CraftMitra uses Cloud Firestore for application data and Cloudinary for product images.
 
 Cloud Firestore
 │
 ├── User Information
-│
 ├── Product Information
-│
 ├── Order Information
-│
 └── Application Data
 
-
 Cloudinary
-│
 └── Product Images
-Data Responsibilities
-Service	Responsibility
-Firebase Authentication	User authentication
-Cloud Firestore	Application and business data
-Cloudinary	Product image storage
-Firebase AI Logic	Artificial intelligence interaction
 
 Detailed database documentation:
 
 docs/06-Database-Design.md
 
-
-12. Security and Authentication
+🔐 Authentication & Security
 
 CraftMitra uses Firebase Authentication for user authentication.
 
-The application separates authentication from application data and media storage.
+The application separates:
+
+Authentication
+Application data
+Product media
 
 Current security considerations include:
 
 Authenticated user access
-Firebase Authentication
 Firestore-based application data
 Application-level validation
 Separate product media storage
-Environment and credential protection during development
+Credential protection during development
 
-Security hardening and production-level security improvements remain part of the continuing development process.
+Production-level security hardening remains part of continued development.
 
 Detailed documentation:
 
-docs/10-Authentication-Security.md
+docs/10-Authentication-and-Security.md
 
+🧪 Testing & Validation
 
-13. Testing and Validation
-
-The application has been validated during development through Flutter tooling and feature-level testing.
+The application has been validated during development using Flutter tooling and feature-level testing.
 
 Development Validation
 Flutter Analyze
-      ↓
 Static Analysis
-      ↓
-No Known Analysis Errors
 Flutter Test
-      ↓
-Automated Test Execution
-Flutter Build APK
-      ↓
-Debug Build Verification
+Debug APK Build Verification
 
-Feature-level validation includes authentication, product creation, image handling, voice input, catalog generation, pricing, buyer matching, orders, and sales-related screens where implemented.
+Feature-level validation covers implemented areas such as:
 
-Detailed test documentation:
+Authentication
+Product creation
+Image handling
+Voice input
+Catalog generation
+Pricing
+Buyer matching
+Orders
+Sales-related screens
+
+Detailed testing documentation:
 
 docs/12-Testing-and-Validation.md
 
+📈 Implementation Progress
 
-14. Implementation Progress
+CraftMitra has been developed incrementally through multiple stages.
 
-CraftMitra has been developed incrementally rather than as a single prototype screen.
-
-Development Stages
-
-Stage 1 — Project Foundation
-
-Flutter project setup
-Application structure
-Theme and design system
-Navigation
-
-Stage 2 — Authentication
-
-User authentication
-Authentication screens
-User flow
-
-Stage 3 — Product Creation
-
-Add product workflow
-Image selection
-Voice input
-Catalog workflow
-
-Stage 4 — Artificial Intelligence Integration
-
-Firebase AI Logic integration
-Gemini integration
-AI-assisted product information
-
-Stage 5 — Marketplace Logic
-
-Smart pricing
-Buyer matching
-Product publishing
-
-Stage 6 — Business Management
-
-Orders
-Sales dashboard
-AI assistant
-
-Stage 7 — Validation and Refinement
-
-Static analysis
-Testing
-Debug build verification
-User interface refinement
+Stage	Progress Area
+1	Project foundation
+2	Authentication
+3	Product creation
+4	Artificial intelligence integration
+5	Marketplace logic
+6	Business management
+7	Testing and refinement
 
 Detailed progress:
 
 docs/13-Implementation-Progress.md
 
-
-15. Project Structure
-CraftMitra
+📁 Project Structure
+CraftMitra/
 │
 ├── android/
 ├── ios/
 ├── lib/
-│   │
 │   ├── core/
 │   ├── models/
 │   ├── providers/
 │   ├── services/
-│   ├── screens/
-│   ├── widgets/
-│   └── ...
+│   └── features/
 │
 ├── assets/
+│   ├── architecture/
+│   ├── database/
+│   ├── flowcharts/
+│   ├── graphs/
+│   └── screenshots/
+│
 ├── docs/
 ├── test/
-│
 ├── pubspec.yaml
 ├── README.md
 └── .gitignore
 
-The application is organized into separate components for screens, services, models, state management, and supporting functionality.
+The application separates screens, services, models, state management, and supporting functionality.
 
-
-16. Technical Decisions
-Decision	Reason
+⚙️ Technical Decisions
+Technology	Reason
 Flutter	Cross-platform mobile development
 Dart	Native language for Flutter
-Firebase Authentication	Authentication without building a custom authentication system
+Firebase Authentication	Managed user authentication
 Cloud Firestore	Cloud-based application data
-Firebase AI Logic	Integration of generative artificial intelligence capabilities
+Firebase AI Logic	Artificial intelligence integration
 Gemini	Product information and AI assistance
-Speech-to-Text	Enables voice-first product creation
-Cloudinary	Product image storage and media handling
+Speech-to-Text	Voice-first product creation
+Cloudinary	Product image storage
 Provider	Application state management
-GoRouter	Structured application navigation
+GoRouter	Structured navigation
 
 Detailed decisions:
 
 docs/14-Technical-Decisions.md
 
+⚠️ Current Limitations
 
-17. Current Limitations
+The current implementation is a working development version.
 
-The current implementation is a working development version and has several areas planned for further development.
-
-Buyer profiles used for demonstration are representative data.
-Buyer matching currently focuses on application-level compatibility rather than a live marketplace network.
-Pricing recommendations are not based on a separately trained machine-learning model.
-Marketplace integrations such as ONDC and other external commerce platforms are future integration areas unless explicitly connected.
-Payment and escrow functionality are not currently implemented as live financial services.
+Buyer profiles are representative data.
+Buyer matching is currently application-level compatibility logic.
+Pricing is not based on a separately trained machine-learning model.
+External marketplace integrations are future work unless explicitly connected.
+Payment and escrow functionality are not implemented as live financial services.
 Production deployment and large-scale infrastructure hardening remain future work.
-Language coverage can be expanded to support additional Indian languages and speech patterns.
+Language coverage can be expanded to additional Indian languages.
 
-These limitations are documented so that the current implementation and future scope remain clearly separated.
+These limitations clearly separate the current implementation from the future scope.
 
+🚀 Future Scope
 
-18. Future Scope
+Potential future extensions include:
 
-Future development can extend CraftMitra through:
+Digital marketplace integrations
+Additional Indian language support
+Larger market datasets
+Advanced pricing models
+Improved buyer discovery
+Production security hardening
+Business intelligence and advanced sales analytics
+Payment and logistics integrations
 
-Marketplace Integration
+Detailed future scope:
 
-Integration with suitable digital commerce and marketplace networks.
+docs/15-Future-Scope.md
 
-Regional Language Expansion
+📚 Documentation
 
-Support for additional Indian languages and regional speech patterns.
+The repository contains focused technical documentation for the major parts of CraftMitra.
 
-Advanced Pricing
-
-Use of larger market datasets and trained models when reliable data becomes available.
-
-Improved Buyer Discovery
-
-Expansion from representative buyer profiles toward real marketplace requirements.
-
-Production Security
-
-Stronger API restrictions, production authentication policies, secure media upload architecture, monitoring, and security auditing.
-
-Business Intelligence
-
-More detailed sales analytics and business insights for artisans.
-
-Logistics and Payments
-
-Integration with appropriate payment, delivery, and order fulfilment services.
-
-
-19. Documentation
-
-The repository contains detailed technical documentation for the project.
-
-Document	                             Description
-Problem Statement	                     Problem and target users
-Project Overview	                     Product concept and objectives
-System Architecture	                     Application architecture and components
-Application Flow	                     End-to-end application workflow
-Feature Documentation	                 Feature-level implementation
-Database Design	                         Firestore data structure
-AI Architecture	                         Artificial intelligence integration
-Smart Pricing	                         Pricing logic
-Buyer Matching	                         Buyer compatibility logic
-Authentication & Security	             Security architecture
-Image & Voice Processing	             Media and voice workflow
-Testing & Validation	                 Development testing
-Implementation Progress	                 Development stages
-Technical Decisions	                     Major technology decisions
-Future Scope	                         Planned improvements
-
-
-20. Prototype
+Document	Description
+01 — Problem Statement	Problem and target users
+02 — Project Overview	Product concept and objectives
+03 — System Architecture	Architecture and components
+04 — Application Flow	End-to-end workflow
+05 — Feature Documentation	Feature implementation
+06 — Database Design	Firestore data structure
+07 — AI Architecture	Artificial intelligence integration
+08 — Smart Pricing	Pricing logic
+09 — Buyer Matching	Buyer compatibility logic
+10 — Authentication & Security	Security architecture
+11 — Image & Voice Processing	Media and voice workflow
+12 — Testing & Validation	Development testing
+13 — Implementation Progress	Development stages
+14 — Technical Decisions	Technology decisions
+15 — Future Scope	Planned improvements
+📱 Prototype
 
 The repository contains the source code and supporting material for the CraftMitra mobile application.
 
-The prototype demonstrates the major product journey:
+Major Product Journey
 
-Product Creation
-      ↓
-AI-Assisted Catalog
-      ↓
-Pricing
-      ↓
-Buyer Matching
-      ↓
-Publishing
-      ↓
-Orders
-      ↓
-Sales
+Product Creation → AI-Assisted Catalog → Pricing → Buyer Matching → Publishing → Orders → Sales
 
-
-
-21. Team
+👥 Team
 DARK CODERS
 
 Project: CraftMitra
